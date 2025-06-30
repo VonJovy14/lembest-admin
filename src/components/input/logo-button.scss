@@ -1,0 +1,25 @@
+.logo-button-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  .logo-container {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-in-out;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &:hover .logo-container {
+    width: 70%;
+  }
+}

@@ -1,0 +1,111 @@
+import One from "../assets/images/Carousel/Home/1.jpg";
+import Two from "../assets/images/Carousel/Home/2.jpg";
+import Three from "../assets/images/Carousel/Home/3.jpg";
+import Four from "../assets/images/Carousel/Home/4.jpg";
+import Five from "../assets/images/Carousel/Home/5.jpg";
+
+export const NewsData = [
+  {
+    id: 1,
+    image: One,
+    year: 2009,
+    title: "LEMBEST was founded",
+    details:
+      "November 28, 2009, 1st LEMBEST outlet was founded at Loreto St. Morning Breeze Subd. Caloocan City.",
+    home_display: false,
+    headline: false,
+    about_display: true,
+  },
+  {
+    id: 2,
+    image: Two,
+    year: 2012,
+    title: "Lembest open for franchise",
+    details:
+      "This year is one of the benchmark For LEMBEST as the company join the franchising industry.",
+    home_display: false,
+    headline: false,
+    about_display: true,
+  },
+  {
+    id: 3,
+    image: Three,
+    year: 2013,
+    title: "1st Franchisee",
+    details:
+      "LEMBEST turns from Single Proprietorship to Corporation. Opened our 1st Franchise in Cagayan Valley with 8 Branches",
+    home_display: false,
+    headline: false,
+    about_display: true,
+  },
+  {
+    id: 4,
+    image: Four,
+    year: 2019,
+    title: "Lembest Cebu and Bicol",
+    details: "Opens LEMBEST CEBU and LEMBEST BICOL.",
+    home_display: false,
+    headline: false,
+    about_display: true,
+  },
+  {
+    id: 5,
+    image: Five,
+    year: 2022,
+    title: "100+ Stores",
+    details: "We reached 100+ stores nationwide.",
+    home_display: false,
+    headline: false,
+    about_display: true,
+  },
+  {
+    id: 6,
+    image: One,
+    year: 2019,
+    title: "Swak sa Cravings",
+    details: "",
+    home_display: true,
+    headline: false,
+    about_display: false,
+  },
+  {
+    id: 7,
+    image: Two,
+    year: 0,
+    title: "Panalo sa Savings",
+    details: "",
+    home_display: true,
+    headline: false,
+    about_display: false,
+  },
+  {
+    id: 8,
+    image: Three,
+    year: 0,
+    title: "Palaban sa lasa",
+    details: "",
+    home_display: true,
+    headline: false,
+    about_display: false,
+  },
+  {
+    id: 9,
+    image: "",
+    year: 0,
+    title: "LET YOUR MONEY WORK. FRANCHISE WITH US!!!",
+    details: "",
+    home_display: false,
+    headline: true,
+    about_display: false,
+  },
+  {
+    id: 10,
+    image: "",
+    year: 0,
+    title: "a BUSINESS OPPORTUNITY THAT IS WORTH THE RISK!!!",
+    details: "",
+    home_display: false,
+    headline: true,
+    about_display: false,
+  },
+];

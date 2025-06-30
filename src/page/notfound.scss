@@ -1,0 +1,24 @@
+.not-found-page-container {
+  background-color: var(--yellow);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+
+  .not-found-page-wrapper {
+    width: 600px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .not-found-page-image-container {
+      height: 200px;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+.button-container {
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+
+.other-font {
+  font-family: montserratregular;
+}
+
+.navigation2-button-container {
+  // padding-top: 3px;
+  &:hover {
+    color: white;
+    background-color: var(--orange);
+  }
+}
+
+.navigation-button-container {
+  font-family: lemonmilkbold;
+  padding: 0 10px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  color: var(--red);
+
+  .navigation-button-wrapper {
+    padding-top: 5px;
+  }
+
+  &:hover {
+    color: white;
+    background-color: var(--orange);
+  }
+}
+
+.navigation-active {
+  color: white;
+  background-color: var(--orange);
+}
+
+.block-button-container {
+  font-family: montserratsemibold;
+  padding: 13px 0 10px 0;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  letter-spacing: 1px;
+  border: var(--red) 2px solid;
+  color: var(--reddark);
+  width: 100%;
+
+  &:hover {
+    background-color: var(--redlight);
+  }
+}
+
+.link-button-wipe-container {
+  position: relative;
+  font-family: montserratsemibold;
+  border-bottom: solid 2px var(--orange);
+  padding: 6px 15px 3px 15px;
+
+  .link-button-wipe-background {
+    background-color: var(--orange);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    z-index: 98;
+    transition: height 0.3s ease;
+  }
+
+  .link-button-wipe-label-container {
+    position: relative;
+    z-index: 99;
+    color: black;
+
+    &:hover + .link-button-wipe-background {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .link-button-wipe-label-container {
+      font-size: 10px;
+    }
+  }
+}
+
+.link-button-circle-container {
+  border-radius: 50%;
+  border: solid 2px var(--red);
+  position: relative;
+  color: var(--red);
+
+  .link-button-circle-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.text-button-border-container {
+  position: relative;
+  font-family: montserratsemibold;
+  // border-bottom: solid 2px var(--orange);
+  cursor: pointer;
+  display: inline-block;
+
+  .text-button-background {
+    background-color: var(--orange);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    z-index: 98;
+    transition: width 0.3s ease;
+  }
+
+  .text-button-border-label-container {
+    position: relative;
+    z-index: 99;
+    color: black;
+    padding: 0 5px;
+
+    &:hover + .text-button-background {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .text-button-border-label-container {
+      font-size: 10px;
+    }
+  }
+}
+
+.icons-button-container {
+  cursor: pointer;
+  display: inline-block;
+
+  .red-icon:hover {
+    color: red;
+  }
+
+  .gray-icon:hover {
+    color: rgb(116, 116, 116);
+  }
+}

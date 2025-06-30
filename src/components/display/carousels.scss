@@ -1,0 +1,21 @@
+.text-carousels-container {
+  background-color: var(--orange);
+  padding: 0 20px;
+  padding-bottom: 3px;
+  text-align: center;
+  margin-top: 3px;
+
+  .text-carousel-label {
+    font-family: montserratregular;
+    font-size: 13px;
+  }
+}
+
+.image-carousels-container {
+  .image-carousel-caption-container {
+    font-family: lemonmilkbold;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 3px;
+  }
+}

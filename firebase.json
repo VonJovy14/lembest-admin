@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist", // or "dist" or "public" — depends on your setup
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

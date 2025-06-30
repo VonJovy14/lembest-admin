@@ -1,0 +1,39 @@
+.select-container {
+  margin: 7px 0;
+  position: relative;
+
+  .select-placeholder-container {
+    margin-left: 8px;
+    padding: 3px 7px 0;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: white;
+    font-size: 12px;
+    z-index: 101;
+    top: 0;
+  }
+
+  select {
+    //remove arrow
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 100;
+    background-color: transparent;
+    border-radius: 3px;
+    border: solid 1px black;
+
+    &:focus {
+      outline: none;
+      border: solid 1px var(--orange);
+    }
+  }
+
+  select:focus + .select-placeholder-container {
+    color: var(--orange);
+  }
+}

@@ -1,0 +1,101 @@
+.header-container {
+  background-color: var(--yellow);
+  padding: 0 20px;
+
+  .header-wrapper {
+    max-width: 1200px;
+    margin: auto;
+
+    .header-image-logo-container {
+      padding: 10px 0;
+
+      .header-image-logo {
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .mobile-button {
+      display: none;
+    }
+
+    .header-navigation-button-container,
+    .header-image-logo-container,
+    .header-navigation-profile-container {
+      height: 70px;
+    }
+
+    .header-navigation-profile-container {
+      position: relative;
+
+      .header-navigation-profile-wrapper {
+        .header-navigation-profile-picture-container {
+          border-radius: 50%;
+          padding: 1px;
+          display: inline-block;
+          transform: translateY(-3px);
+          margin-left: 5px;
+        }
+
+        .header-navigation-profile-name-container {
+          display: inline-block;
+        }
+      }
+
+      .header-navigation-profile-menu-buttons-container {
+        position: absolute;
+        right: -3px;
+        min-width: 200px;
+        z-index: 200;
+
+        .header-navigation-profile-collapsible-menu-buttons-container {
+          border-radius: 0 0 7px 7px;
+          padding: 3px;
+          background-color: white;
+
+          .header-navigation-profile-collapsible-menu-buttons-wrapper {
+            background-color: var(--yellow);
+            border-radius: 0 0 5px 5px;
+            overflow: hidden;
+
+            .header-navigation-profile-collapsible-menu-button-container {
+              padding-left: 15px;
+
+              .header-navigation-profile-collapsible-menu-button-label-container {
+                padding-top: 3px;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--orange);
+
+        .header-navigation-profile-wrapper {
+          color: white;
+          background-color: var(--orange);
+          .header-navigation-profile-picture-container {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 425px) {
+      .header-image-logo-container {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.header-mobile-container {
+  background-color: var(--yellow);
+
+  .header-navigation-button-container {
+    height: 30px;
+  }
+}

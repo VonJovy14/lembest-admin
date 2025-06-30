@@ -1,0 +1,91 @@
+.container {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.component-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.module-container {
+  .module-wrapper {
+    padding: 20px;
+  }
+
+  @media (max-width: 425px) {
+    .module-wrapper {
+      padding: 10px;
+    }
+  }
+}
+
+.form-container {
+  .form-submit-button-container {
+    margin-top: 20px;
+  }
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.orange {
+  background-color: var(--orange);
+}
+
+.white {
+  background-color: white;
+}
+
+.app-container {
+  .app-wrapper {
+    margin: auto;
+    max-width: 1000px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.paragraph-container {
+  background-color: white;
+  border-radius: 10px;
+
+  .paragraph-wrapper {
+    text-align: justify;
+  }
+}
+
+.collapsible-container {
+  overflow: hidden;
+  transition: height 1s ease;
+  height: 0;
+}
+
+.border-style {
+  height: 100%;
+
+  .paragraph-wrapper {
+    padding: 20px;
+    height: 100%;
+  }
+
+  .border-red {
+    border: solid 2px var(--red);
+  }
+
+  .border-yellow {
+    border: solid 2px var(--yellow);
+  }
+
+  .border-orange {
+    border: solid 2px var(--orange);
+  }
+}
