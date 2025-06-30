@@ -4,18 +4,20 @@ import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Grid from "@mui/material/Grid";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
 
 import { TitleOne } from "../../components/display/Title";
 import { IconsButton, CircleIconsButton } from "../../components/input/Button";
 
-import PettyCashModal from "../../modules/ap/PettyCashModal";
+import ApPettyCashModal from "../../modules/ap/ApPettyCashModal";
 import ApAccountsTableRow from "../../modules/ap/AccountsTableRow";
 import { useAccountPayable } from "../../middleware/hooks/useAccountPayable";
 
@@ -154,6 +156,7 @@ function ApAccounts() {
                 </TableCell>
               </TableRow>
             </TableHead>
+
             <TableBody>
               {filteredApData.map((row, index) => (
                 <ApAccountsTableRow
@@ -168,7 +171,7 @@ function ApAccounts() {
         </TableContainer>
       </div>
 
-      <PettyCashModal
+      <ApPettyCashModal
         open={pettyCashModalState}
         close={() => setPettyCashModalState(false)}
         data={activeApAccountData}

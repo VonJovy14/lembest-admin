@@ -27,6 +27,7 @@ import FaceIcon from "@mui/icons-material/Face";
 import LogoutIcon from "@mui/icons-material/Logout";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
+import DoDisturbIcon from "@mui/icons-material/DoDisturb";
 
 const Icons = ({ icon, size }) => {
   switch (icon) {
@@ -88,6 +89,8 @@ const Icons = ({ icon, size }) => {
       return <LocalShippingIcon sx={{ fontSize: size }} />;
     case "key":
       return <VpnKeyIcon sx={{ fontSize: size }} />;
+    case "cancel":
+      return <DoDisturbIcon sx={{ fontSize: size }} />;
     default:
       null;
   }

@@ -11,12 +11,15 @@ import {
   Paper,
 } from "@mui/material";
 
-import { formatSelectData } from "../../middleware/hooks/FormatData";
+import {
+  formatSelectData,
+  formatNumber,
+} from "../../middleware/hooks/FormatData";
 import { TextField, NumberField } from "../../components/input/TextField";
 import { TextButton, IconsButton } from "../../components/input/Button";
 import Select from "../../components/input/Select";
 import { FormContainer, BorderContainer } from "../Container";
-import { usePettyCash } from "../../middleware/hooks/usePettyCash"; // ⬅️ Your custom hook!
+import { usePettyCash } from "../../middleware/hooks/usePettyCash";
 
 function PettyCash({ id, balance, dueDate }) {
   const {
@@ -152,7 +155,7 @@ function PettyCash({ id, balance, dueDate }) {
                   type="text"
                   label=""
                   disabled
-                  value={calculatePettyCashTotal()}
+                  value={formatNumber(calculatePettyCashTotal())}
                   onChange={() => null}
                 />
               </TableCell>

@@ -89,10 +89,15 @@ export const useAccountPayable = (apData, expensesData) => {
     return total - clearedExpenses;
   };
 
+  const fetchAccountPDC = (AccountId) => {
+    return <span>{AccountId}</span>;
+  };
+
   return {
     calculatePastDueBalance,
     calculateCurrentBalance,
     calculateAgingOutstandingBalance,
     calculateApBalance,
+    fetchAccountPDC,
   };
 };

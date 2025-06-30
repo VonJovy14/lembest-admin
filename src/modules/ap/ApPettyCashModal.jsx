@@ -1,20 +1,21 @@
-import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
+import { useSelector } from "react-redux";
+
+import { formatDate, formatNumber } from "../../middleware/hooks/FormatData";
+
+import PettyCash from "../forms/PettyCash";
+
+import AccountPDC from "../PDC";
+
 import AppModalWithClose from "../../components/display/Modal";
-import { BorderContainer } from "../../modules/Container";
+import { BorderContainer } from "../Container";
 import { UnitTextDisplay } from "../../components/display/TextDisplay";
-import PettyCash from "../../modules/forms/PettyCash";
-import {
-  formatDate,
-  formatNumber,
-  formatNumberBack,
-} from "../../middleware/hooks/FormatData";
 
-const PettyCashModal = ({ open, close, data, calculateApBalance }) => {
+import Grid from "@mui/material/Grid";
+
+const ApPettyCashModal = ({ open, close, data, calculateApBalance }) => {
+  const apExpenses = useSelector((state) => state.expenses);
+
   if (!data?.id) return null;
-
-  const balance =
-    formatNumberBack(data.grand_total) - calculateApBalance(data.id);
 
   const calculateAging = (dueDate) => {
     const today = new Date();
@@ -24,6 +25,8 @@ const PettyCashModal = ({ open, close, data, calculateApBalance }) => {
     const diffTime = today - due;
     return Math.max(0, Math.floor(diffTime / (1000 * 60 * 60 * 24)));
   };
+
+  const fetchAccountPDC = apExpenses.filter((item) => item.ap_id === data.id);
 
   return (
     <AppModalWithClose
@@ -52,7 +55,9 @@ const PettyCashModal = ({ open, close, data, calculateApBalance }) => {
                   <div>
                     <b>BALANCE</b>
                   </div>
-                  <UnitTextDisplay value={formatNumber(balance)} />
+                  <UnitTextDisplay
+                    value={formatNumber(calculateApBalance(data.id))}
+                  />
                 </div>
               </BorderContainer>
             </Grid>
@@ -70,10 +75,18 @@ const PettyCashModal = ({ open, close, data, calculateApBalance }) => {
           </Grid>
         </div>
 
-        <PettyCash id={data.id} balance={balance} dueDate={data.due_date} />
+        <div className="ap-accounts-petty-cash-modal-wrapper">
+          <AccountPDC data={fetchAccountPDC} />
+        </div>
+
+        <PettyCash
+          id={data.id}
+          balance={calculateApBalance(data.id)}
+          dueDate={data.due_date}
+        />
       </div>
     </AppModalWithClose>
   );
 };
 
-export default PettyCashModal;
+export default ApPettyCashModal;

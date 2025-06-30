@@ -10,6 +10,7 @@ export const confirmDialog = async ({
   confirmButtonText = "Yes, delete it!",
   denyButtonText = "Dont save",
   showDenyButton = false,
+  footer = false,
 }) => {
   return await Swal.fire({
     title,
@@ -21,6 +22,7 @@ export const confirmDialog = async ({
     showCancelButton,
     confirmButtonColor,
     cancelButtonColor,
+    footer,
   });
 };
 
