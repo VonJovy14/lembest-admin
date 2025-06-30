@@ -28,6 +28,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import DoDisturbIcon from "@mui/icons-material/DoDisturb";
+import InventoryIcon from "@mui/icons-material/Inventory";
 
 const Icons = ({ icon, size }) => {
   switch (icon) {
@@ -91,6 +92,8 @@ const Icons = ({ icon, size }) => {
       return <VpnKeyIcon sx={{ fontSize: size }} />;
     case "cancel":
       return <DoDisturbIcon sx={{ fontSize: size }} />;
+    case "inventory":
+      return <InventoryIcon sx={{ fontSize: size }} />;
     default:
       null;
   }

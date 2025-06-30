@@ -12,7 +12,9 @@ import NotFound from "../page/NotFound";
 
 import PurchaseOrder from "../page/PurchaseOrder";
 import AccountPayable from "../page/AccountPayable";
+import Inventory from "../page/Inventory";
 import ApDashboard from "../page/ap/ApDashboard";
+import InventoryDashboard from "../page/inventory/InventoryDashboard";
 import ApAccounts from "../page/ap/ApAccounts";
 import Users from "../page/Users";
 import SignUp from "../page/authentication/SignUp";
@@ -36,10 +38,16 @@ const AppRoutes = () => {
           >
             <Route path="register-account" element={<SignUp />} />
             <Route path="purchase-order" element={<PurchaseOrder />} />
+
             <Route path="account-payable" element={<AccountPayable />}>
               <Route index element={<ApDashboard />} />
               <Route path=":vendorName" element={<ApAccounts />} />
             </Route>
+
+            <Route path="inventory" element={<Inventory />}>
+              <Route index element={<InventoryDashboard />} />
+            </Route>
+
             <Route path="users" element={<Users />} />
           </Route>
         </Route>

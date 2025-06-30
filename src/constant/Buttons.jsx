@@ -66,6 +66,7 @@ export const LogoButton = {
 export const SuperAdminNav = [
   { icon: "ap", link: "account-payable", label: "Account Payable" },
   { icon: "po", link: "purchase-order", label: "Purchase Order" },
+  { icon: "inventory", link: "inventory", label: "Inventory" },
   { icon: "key", link: "users", label: "Users" },
 ];
 
@@ -75,8 +76,10 @@ export const AccountingSupervisorNav = [
 
 export const LogisticHeadNav = [
   { icon: "po", link: "purchase-order", label: "Purchase Order" },
+  { icon: "inventory", link: "inventory", label: "Inventory" },
 ];
 
 export const LogisticAssistantNav = [
   { icon: "po", link: "purchase-order", label: "Purchase Order" },
+  { icon: "inventory", link: "inventory", label: "Inventory" },
 ];
