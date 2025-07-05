@@ -1,0 +1,15 @@
+.header-module-container {
+  .header-module-logo-container {
+    padding: 5px 0;
+  }
+}
+
+.header-module-navigation-button-container {
+  cursor: pointer;
+  height: 100%;
+
+  &:hover {
+    background-color: var(--orange);
+    color: white;
+  }
+}

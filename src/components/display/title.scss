@@ -1,0 +1,31 @@
+.title-one-container {
+  font-family: lemonmilkbold;
+  color: var(--darkblue);
+}
+
+.no-border {
+  margin-bottom: -10px;
+}
+
+.title-two-container {
+  font-family: lemonmilkbold;
+  color: var(--red);
+  position: relative;
+  padding-bottom: 20px;
+
+  .title-two-line {
+    width: 50%;
+    height: 5px;
+    margin-top: -10px;
+    background-color: var(--orange);
+  }
+}
+
+.title-three-container {
+  text-align: center;
+  font-family: lucky;
+  color: var(--yellow);
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 1px;
+  text-shadow: -2px 2px 0 rgb(0, 0, 0);
+}
